@@ -7,12 +7,29 @@
     justify-content: space-around;
     background: rgba(255, 255, 255, 0.658);
     align-items: center;
-    min-width: 40%;
+    min-width: 450px;
+    max-width: 450px;
     padding: 10px;
 }
 
 .image{
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 10rem;
+    height: 10rem;
+}
+
+.recipe .recipeTitle{
+    text-align: center;
+    font-weight: 300;
+}
+
+.recipe .recipeIngredient{
+    font-weight: 300;
+}
+
+@media screen and (max-width: 768px){
+    .recipe{
+        min-width: 20rem;
+        max-width: 20rem;
+    }
 }
