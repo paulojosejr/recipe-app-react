@@ -1,9 +1,17 @@
 import React from 'react'
-import RecipeList from './components/RecipeList/RecipeList'
+import { HashRouter } from 'react-router-dom'
+
+import Navbar from './components/Navbar/Navbar'
+import Routes from './Routes'
 
 const App = () => {
   return (
-    <RecipeList />
+    <HashRouter>
+    <main>
+      <Navbar />
+      <Routes />
+    </main>
+  </HashRouter>
   )
 }
 
