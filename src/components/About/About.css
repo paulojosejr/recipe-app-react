@@ -1,0 +1,18 @@
+.aboutBox{
+    display: flex;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.aboutH{
+    flex-shrink: 0;
+    margin: 0 2rem;
+    align-self: center;
+    font-weight: 400;
+}
+.aboutT{
+    flex-shrink: 2;
+    margin: 0 2rem;
+    font-weight: 300;
+}
