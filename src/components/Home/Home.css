@@ -1,0 +1,42 @@
+@import '../../index.css';
+
+.entrance {
+    min-height: calc(100vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.banner {
+    text-align: center;
+    background: var(--primaryBlueLight);
+    display: inline-block;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.banner h1{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.banner h2{
+    margin-bottom: 1rem;
+}
+
+.banner-title {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    color: var(--primaryBlack);
+}
+  @media screen and (max-width: 538px){
+    .banner{
+      padding: 1rem;
+      padding-bottom: 0rem;
+    }
+    .banner h2 {
+        font-size: 1.2rem;
+    }
+}
