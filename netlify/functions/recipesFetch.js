@@ -1,15 +1,15 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
-const APP_ID =  process.env.REACT_APP_ID;
+const APP_ID = process.env.REACT_APP_ID;
 const APP_KEY = process.env.REACT_APP_KEY;
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   try {
-    const {query} = event.queryStringParameters || {};
+    const { query } = event.queryStringParameters || {};
     if (!query) {
       return { statusCode: 400, body: "Missing query parameters" };
     }
-    let url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    let url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
     const response = await fetch(url);
     if (!response.ok) {
@@ -22,13 +22,13 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 200,
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     };
   } catch (err) {
     console.log("invocation error:", err); // output to netlify function log
     return {
       statusCode: 500,
-      body: err.message // Could be a custom message or object i.e. JSON.stringify(err)
+      body: err.message, // Could be a custom message or object i.e. JSON.stringify(err)
     };
   }
 };
