@@ -8,16 +8,15 @@ const App = () => {
   const [query, setQuery] = useState("tapioca");
 
   useEffect(() => {
+    const getRecipes = async () => {
+      const response = await fetch(
+        `../.netlify/functions/recipesFetch?query=${query}`
+      );
+      const data = await response.json();
+      setRecipes(data.hits);
+    };
     getRecipes();
   }, [query]);
-
-  const getRecipes = async () => {
-    const response = await fetch(
-      `../.netlify/functions/recipesFetch?query=${query}`
-    );
-    const data = await response.json();
-    setRecipes(data.hits);
-  };
 
   const updateSearch = (e) => {
     setSearch(e.target.value);

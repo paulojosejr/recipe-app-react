@@ -1,55 +1,49 @@
-@import '../../index.css';
+@import "../../index.css";
 .navbar {
-    background: var(--primaryBlue);
-    padding: 0.5rem 1rem;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-ul li{
-    list-style-type: none;
+  background: var(--primaryBlue);
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .nav-links {
-    text-align: center;
-    align-self: center;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
+  text-align: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  padding: 0.8em;
 }
 
-.nav-link{
-    color: var(--primaryBlack);
-    text-transform: capitalize;
-    text-decoration: none;
-    transition: all 0.3s linear;
+.nav-link {
+  color: var(--primaryBlack);
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s linear;
 }
-.nav-link:hover{
-    color: var(--primaryWhite);
-    
-}
-
-@media only screen and (min-width: 538px){
-    .nav-link{
-        font-size: 1.4rem;
-    }
+.nav-link:hover {
+  color: var(--primaryWhite);
 }
 
-@media only screen and (min-width: 992px){
-    .nav-link{
-        font-size: 1.8rem;
-    }
+@media only screen and (min-width: 538px) {
+  .nav-link {
+    font-size: 1.4rem;
+  }
 }
 
-@media only screen and (min-width: 1140px){
-    .nav-link{
-        font-size: 2.2rem;
-    }
+@media only screen and (min-width: 992px) {
+  .nav-link {
+    font-size: 1.8rem;
+  }
 }
 
-.active{
-    color: var(--primaryWhite);
+@media only screen and (min-width: 1140px) {
+  .nav-link {
+    font-size: 2.2rem;
+  }
+}
+
+.active {
+  color: var(--primaryWhite);
 }
